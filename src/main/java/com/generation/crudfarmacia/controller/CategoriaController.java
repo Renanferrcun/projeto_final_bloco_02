@@ -83,7 +83,7 @@ public class CategoriaController {
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable Long id) {
+	public void deletarCategoria(@PathVariable Long id) {
 		Optional<CategoriaModel> categoria = categoriaRepository.findById(id);
 		
 		if(categoria.isEmpty())

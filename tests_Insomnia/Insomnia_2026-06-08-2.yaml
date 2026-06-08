@@ -226,6 +226,179 @@ collection:
             send: true
             store: true
           rebuildPath: true
+  - name: Produto
+    meta:
+      id: fld_5df6ba58761e4fe288c02f92fd3280f3
+      created: 1780929744363
+      modified: 1780929744363
+      sortKey: -1779920808979.5
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: Listar Todos Produtos
+        meta:
+          id: req_0ba55ad4252842bca7d682eed44b64c7
+          created: 1780929744363
+          modified: 1780929970968
+          isPrivate: false
+          description: ""
+          sortKey: -1779924040309
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar Produto
+        meta:
+          id: req_2bcd3ae991ba490995d9f7d41facc74d
+          created: 1780929744363
+          modified: 1780931218242
+          isPrivate: false
+          description: ""
+          sortKey: -1779922403023
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 1,
+              "nome": "Amoxicilina 500mg EMS 30 Comprimidos (Atualizado!)",
+              "preco": 49.90,
+              "estoque": 25,
+              "categoria": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Deletar Produto
+        meta:
+          id: req_416aa79fb8d94b79a83ada9ff94c8238
+          created: 1780929744363
+          modified: 1780929987388
+          isPrivate: false
+          description: ""
+          sortKey: -1779922402973
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Cadastrar Produto
+        meta:
+          id: req_61676c067d624a29b50f59aa73f0fc19
+          created: 1780929744363
+          modified: 1780931008226
+          isPrivate: false
+          description: ""
+          sortKey: -1779925677470
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Amoxicilina 500mg EMS 30 Comprimidos",
+              "preco": 45.90,
+              "estoque": 12,
+              "categoria": {
+                "id": 1
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/1
+        name: Listar Produtos por ID
+        meta:
+          id: req_aa0e6ee1cb754e8282a24a315f19b3fe
+          created: 1780929744363
+          modified: 1780929977648
+          isPrivate: false
+          description: ""
+          sortKey: -1779923221728.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/amoxicilina
+        name: Listar Produtos por Nome
+        meta:
+          id: req_056970b789934a5b80e17c714c2d55d3
+          created: 1780931182837
+          modified: 1780931199900
+          isPrivate: false
+          description: ""
+          sortKey: -1779922812450.75
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:

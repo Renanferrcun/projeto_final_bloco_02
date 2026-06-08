@@ -1,10 +1,18 @@
 package com.generation.crudfarmacia.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 @Entity
@@ -15,23 +23,27 @@ public class CategoriaModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull(message = "O Atributo Classe é obrigatório")
+	@NotBlank(message = "O Atributo Classe é obrigatório")
 	private String classe;
 	
-	@NotNull(message = "O Atributo Principio Ativo é obrigatório")
+	@NotBlank(message = "O Atributo Principio Ativo é obrigatório")
 	private String principioAtivo;
 	
-	@NotNull(message = "O Atributo Laboratório é obrigatório")
+	@NotBlank(message = "O Atributo Laboratório é obrigatório")
 	private String laboratorio;
 	
-	@NotNull(message = "O Atributo Tarja é obrigatório")
+	@NotBlank(message = "O Atributo Tarja é obrigatório")
 	private String tarja;
 	
-	@NotNull(message = "O Atributo Descrição é obrigatório")
+	@NotBlank(message = "O Atributo Descrição é obrigatório")
 	private String tipo;
 	
 	@NotNull(message = "O Atributo Requer Receita é obrigatório")
 	private Boolean requerReceita;
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("categoria")
+	private List<ProdutoModel> produto;
 
 	public Long getId() {
 		return id;
@@ -87,6 +99,14 @@ public class CategoriaModel {
 
 	public void setRequerReceita(Boolean requerReceita) {
 		this.requerReceita = requerReceita;
+	}
+
+	public java.util.List<ProdutoModel> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(java.util.List<ProdutoModel> produto) {
+		this.produto = produto;
 	} 
 
 }
