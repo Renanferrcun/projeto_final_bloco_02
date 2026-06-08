@@ -1,0 +1,241 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: CRUD Farmacia
+meta:
+  id: wrk_4804b726fefe48bf945a23618b1fb33e
+  created: 1780925863213
+  modified: 1780925863213
+  description: ""
+collection:
+  - name: Categoria
+    meta:
+      id: fld_05ad80eacb724d92b1dec6958ea2f336
+      created: 1779920812195
+      modified: 1779920812195
+      sortKey: -1779920812195
+      description: ""
+    children:
+      - url: http://localhost:8080/categorias
+        name: Cadastrar Categoria
+        meta:
+          id: req_e5b457cc740d4ccb982495362df7670d
+          created: 1779922403173
+          modified: 1780926021440
+          isPrivate: false
+          description: ""
+          sortKey: -1779925677470
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "classe": "Antibiótico",
+              "principioAtivo": "Amoxicilina",
+              "laboratorio": "EMS",
+              "tarja": "Vermelha",
+              "tipo": "Genérico",
+              "requerReceita": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Listar Todas Categoria
+        meta:
+          id: req_bcfc1f25cb46420d871d6ff612661cfa
+          created: 1779925670383
+          modified: 1780926083351
+          isPrivate: false
+          description: ""
+          sortKey: -1779924040309
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Listar Categoria por ID
+        meta:
+          id: req_7376a4e4c39444dfacc433611eb1eea9
+          created: 1779925672476
+          modified: 1780926084947
+          isPrivate: false
+          description: ""
+          sortKey: -1779923221728.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/genero/Aventura
+        name: Listar Categoria por Classe
+        meta:
+          id: req_c53d38e79b484e1ea4ca1108dd500957
+          created: 1779925674232
+          modified: 1780926056168
+          isPrivate: false
+          description: ""
+          sortKey: -1779922403148
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Atualizar Categoria
+        meta:
+          id: req_6b778deaf9d04166a398f0b68f1d0f49
+          created: 1779925676045
+          modified: 1780926280584
+          isPrivate: false
+          description: ""
+          sortKey: -1779922403023
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 1,
+              "classe": "Antibiótico",
+              "principioAtivo": "Amoxicilina + Clavulanato",
+              "laboratorio": "Medley",
+              "tarja": "Vermelha",
+              "tipo": "Referência",
+              "requerReceita": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Deletar Categoria
+        meta:
+          id: req_749422e5c0234cfcb711b14feb2f5f19
+          created: 1779925677370
+          modified: 1780926310260
+          isPrivate: false
+          description: ""
+          sortKey: -1779922402973
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/laboratorio/ems
+        name: Listar Categoria por Laboratório
+        meta:
+          id: req_75130cdafb7e47258e8981fc27095392
+          created: 1780926098197
+          modified: 1780926175976
+          isPrivate: false
+          description: ""
+          sortKey: -1779922403135.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/principioAtivo/amoxicilina
+        name: Listar Categoria por Principio Ativo
+        meta:
+          id: req_65d367182c5640149fbd069db583bb5b
+          created: 1780926128421
+          modified: 1780926260503
+          isPrivate: false
+          description: ""
+          sortKey: -1779922403129.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1ec4b2c18d33410a90c179a161a9c216
+    created: 1779920774010
+    modified: 1779920774010
+environments:
+  name: Base Environment
+  meta:
+    id: env_340e3f51d00e462eaa472d9e89abcc69
+    created: 1779920774008
+    modified: 1779920774008
+    isPrivate: false
