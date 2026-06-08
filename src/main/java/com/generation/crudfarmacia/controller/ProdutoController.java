@@ -56,14 +56,13 @@ public class ProdutoController {
 	@PostMapping
 	public ResponseEntity<ProdutoModel> cadastrarProduto(@Valid @RequestBody ProdutoModel produto) {
 		
-		if (categoriaRepository.existsById(produto.getCategoria().getId())) {
-			
-			produto.setId(null);
-			
-			return ResponseEntity.status(HttpStatus.CREATED)
-					.body(produtoRepository.save(produto));
-		}
-		throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Categoria não existe", null);	
+		return categoriaRepository.findById(produto.getCategoria().getId())
+				.map(categoriaExistente -> {
+					produto.setId(null);
+					produto.setCategoria(categoriaExistente); 
+					return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto));
+				})
+				.orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Categoria não existe", null));
 	}
 	
 	@PutMapping
@@ -71,12 +70,14 @@ public class ProdutoController {
 		
 		if (produtoRepository.existsById(produto.getId())) {
 			
-			if (categoriaRepository.existsById(produto.getCategoria().getId())) {
-				return ResponseEntity.status(HttpStatus.OK)
-						.body(produtoRepository.save(produto));
-			}
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Categoria não existe", null);
+			return categoriaRepository.findById(produto.getCategoria().getId())
+					.map(categoriaExistente -> {
+						produto.setCategoria(categoriaExistente); // Preenche a categoria completa
+						return ResponseEntity.status(HttpStatus.OK).body(produtoRepository.save(produto));
+					})
+					.orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Categoria não existe", null));
 		}
+		
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 	

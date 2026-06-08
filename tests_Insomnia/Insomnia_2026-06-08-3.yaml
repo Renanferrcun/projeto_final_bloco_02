@@ -20,7 +20,7 @@ collection:
         meta:
           id: req_e5b457cc740d4ccb982495362df7670d
           created: 1779922403173
-          modified: 1780926021440
+          modified: 1780941745421
           isPrivate: false
           description: ""
           sortKey: -1779925677470
@@ -29,9 +29,9 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "classe": "Antibiótico",
-              "principioAtivo": "Amoxicilina",
-              "laboratorio": "EMS",
+              "classe": "Anti-inflamatório",
+              "principioAtivo": "Nimesulida",
+              "laboratorio": "Cimed",
               "tarja": "Vermelha",
               "tipo": "Genérico",
               "requerReceita": true
@@ -41,6 +41,11 @@ collection:
             value: application/json
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
             description: ""
             disabled: false
         settings:
@@ -56,7 +61,7 @@ collection:
         meta:
           id: req_bcfc1f25cb46420d871d6ff612661cfa
           created: 1779925670383
-          modified: 1780926083351
+          modified: 1780940374198
           isPrivate: false
           description: ""
           sortKey: -1779924040309
@@ -64,6 +69,10 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
             description: ""
             disabled: false
         settings:
@@ -79,7 +88,7 @@ collection:
         meta:
           id: req_7376a4e4c39444dfacc433611eb1eea9
           created: 1779925672476
-          modified: 1780926084947
+          modified: 1780940371587
           isPrivate: false
           description: ""
           sortKey: -1779923221728.5
@@ -87,6 +96,10 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
             description: ""
             disabled: false
         settings:
@@ -97,12 +110,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/categorias/genero/Aventura
+      - url: http://localhost:8080/categorias/classe/antibiotico
         name: Listar Categoria por Classe
         meta:
           id: req_c53d38e79b484e1ea4ca1108dd500957
           created: 1779925674232
-          modified: 1780926056168
+          modified: 1780941936719
           isPrivate: false
           description: ""
           sortKey: -1779922403148
@@ -110,6 +123,10 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
             description: ""
             disabled: false
         settings:
@@ -125,7 +142,7 @@ collection:
         meta:
           id: req_6b778deaf9d04166a398f0b68f1d0f49
           created: 1779925676045
-          modified: 1780926280584
+          modified: 1780941838159
           isPrivate: false
           description: ""
           sortKey: -1779922403023
@@ -134,12 +151,12 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "id": 1,
-              "classe": "Antibiótico",
-              "principioAtivo": "Amoxicilina + Clavulanato",
+              "id": 3,
+              "classe": "Anti-inflamatório",
+              "principioAtivo": "Nimesulida Gotas",
               "laboratorio": "Medley",
               "tarja": "Vermelha",
-              "tipo": "Referência",
+              "tipo": "Genérico",
               "requerReceita": true
             }
         headers:
@@ -147,6 +164,11 @@ collection:
             value: application/json
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
             description: ""
             disabled: false
         settings:
@@ -157,12 +179,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/categorias/1
+      - url: http://localhost:8080/categorias/3
         name: Deletar Categoria
         meta:
           id: req_749422e5c0234cfcb711b14feb2f5f19
           created: 1779925677370
-          modified: 1780926310260
+          modified: 1780941982341
           isPrivate: false
           description: ""
           sortKey: -1779922402973
@@ -170,6 +192,11 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
             description: ""
             disabled: false
         settings:
@@ -185,7 +212,7 @@ collection:
         meta:
           id: req_75130cdafb7e47258e8981fc27095392
           created: 1780926098197
-          modified: 1780926175976
+          modified: 1780940363622
           isPrivate: false
           description: ""
           sortKey: -1779922403135.5
@@ -193,6 +220,10 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
             description: ""
             disabled: false
         settings:
@@ -208,7 +239,7 @@ collection:
         meta:
           id: req_65d367182c5640149fbd069db583bb5b
           created: 1780926128421
-          modified: 1780926260503
+          modified: 1780940361865
           isPrivate: false
           description: ""
           sortKey: -1779922403129.25
@@ -216,6 +247,10 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
             description: ""
             disabled: false
         settings:
@@ -239,7 +274,7 @@ collection:
         meta:
           id: req_0ba55ad4252842bca7d682eed44b64c7
           created: 1780929744363
-          modified: 1780929970968
+          modified: 1780940352027
           isPrivate: false
           description: ""
           sortKey: -1779924040309
@@ -247,6 +282,10 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
             description: ""
             disabled: false
         settings:
@@ -262,21 +301,21 @@ collection:
         meta:
           id: req_2bcd3ae991ba490995d9f7d41facc74d
           created: 1780929744363
-          modified: 1780931218242
+          modified: 1780941866007
           isPrivate: false
           description: ""
           sortKey: -1779922403023
         method: PUT
         body:
           mimeType: application/json
-          text: |-
+          text: >-
             {
-              "id": 1,
-              "nome": "Amoxicilina 500mg EMS 30 Comprimidos (Atualizado!)",
-              "preco": 49.90,
-              "estoque": 25,
+              "id": 4,
+              "nome": "Cimelide Nimesulida 100mg 12 Comprimidos (Promoção Leve 2 Pague 1)",
+              "preco": 22.90,
+              "estoque": 20,
               "categoria": {
-                "id": 1
+                "id": 3
               }
             }
         headers:
@@ -284,6 +323,11 @@ collection:
             value: application/json
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
             description: ""
             disabled: false
         settings:
@@ -294,12 +338,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/categorias/1
+      - url: http://localhost:8080/produtos/4
         name: Deletar Produto
         meta:
           id: req_416aa79fb8d94b79a83ada9ff94c8238
           created: 1780929744363
-          modified: 1780929987388
+          modified: 1780942088916
           isPrivate: false
           description: ""
           sortKey: -1779922402973
@@ -307,6 +351,11 @@ collection:
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
             description: ""
             disabled: false
         settings:
@@ -322,7 +371,7 @@ collection:
         meta:
           id: req_61676c067d624a29b50f59aa73f0fc19
           created: 1780929744363
-          modified: 1780931008226
+          modified: 1780943440657
           isPrivate: false
           description: ""
           sortKey: -1779925677470
@@ -331,12 +380,112 @@ collection:
           mimeType: application/json
           text: |-
             {
-              "nome": "Amoxicilina 500mg EMS 30 Comprimidos",
-              "preco": 45.90,
-              "estoque": 12,
+              "nome": "Cimelide Nimesulida 100mg 12 Comprimidos",
+              "preco": 14.20,
+              "estoque": 45,
               "categoria": {
                 "id": 1
               }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQzMzgwLCJleHAiOjE3ODA5NDY5ODB9.P20BnLpOTV2c8vX1bYZspoG11NyLqfX2Xw70SoxLjIIPWZeo2loyyZPJhSoLEt0b
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/1
+        name: Listar Produtos por ID
+        meta:
+          id: req_aa0e6ee1cb754e8282a24a315f19b3fe
+          created: 1780929744363
+          modified: 1780940350047
+          isPrivate: false
+          description: ""
+          sortKey: -1779923221728.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/amoxicilina
+        name: Listar Produtos por Nome
+        meta:
+          id: req_056970b789934a5b80e17c714c2d55d3
+          created: 1780931182837
+          modified: 1780940345342
+          isPrivate: false
+          description: ""
+          sortKey: -1779922812450.75
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: ""
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuario
+    meta:
+      id: fld_40e821f8aa134db18aeb0f994384bc8e
+      created: 1780939352937
+      modified: 1780939352937
+      sortKey: -1000000000
+      description: ""
+    children:
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: Cadastrar Usuario
+        meta:
+          id: req_23669c32c8694c40a3494f82a1f03c21
+          created: 1780939352937
+          modified: 1780940297688
+          isPrivate: false
+          description: ""
+          sortKey: -1780796811522
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome" : "Root",
+            	"usuario" : "root@root.com.br",
+            	"senha" : "rootroot"
             }
         headers:
           - name: Content-Type
@@ -353,17 +502,95 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/produtos/1
-        name: Listar Produtos por ID
+      - url: http://localhost:8080/usuarios/1
+        name: Consultar Usuario por ID
         meta:
-          id: req_aa0e6ee1cb754e8282a24a315f19b3fe
-          created: 1780929744363
-          modified: 1780929977648
+          id: req_38f6e799a81141c0aeb855ae992c017f
+          created: 1780939352937
+          modified: 1780942107767
           isPrivate: false
           description: ""
-          sortKey: -1779923221728.5
+          sortKey: -1779988307094
         method: GET
         headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/atualizar
+        name: Atualizar Usuario
+        meta:
+          id: req_3fd13e925c1347deac0e39ae1a87c65c
+          created: 1780939352937
+          modified: 1780943525396
+          isPrivate: false
+          description: ""
+          sortKey: -1779988170119
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id" : 1,
+            	"nome" : "Administrador do Sistema",
+            	"usuario" : "admin@email.com.br",
+            	"senha" : "admin123",
+            	"foto" : "https://i.imgur.com/Tk9f10K.png"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/logar
+        name: Autenticar Usuario
+        meta:
+          id: req_441efc7deb9b4cc0bfa2d4835b3fea9e
+          created: 1780939352937
+          modified: 1780940299401
+          isPrivate: false
+          description: ""
+          sortKey: -1780392559308
+        method: POST
+        body:
+          mimeType: application/json
+          text: |+
+            {
+            	"usuario" : "root@root.com.br",
+            	"senha" : "rootroot"
+            }
+
+        headers:
+          - name: Content-Type
+            value: application/json
           - name: User-Agent
             value: insomnia/12.6.0
             description: ""
@@ -376,19 +603,52 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/produtos/nome/amoxicilina
-        name: Listar Produtos por Nome
+      - url: http://localhost:8080/usuarios/all
+        name: Consultar todos os Usuarios
         meta:
-          id: req_056970b789934a5b80e17c714c2d55d3
-          created: 1780931182837
-          modified: 1780931199900
+          id: req_90cfc4d87fc24f639b5831fc0cb74a3e
+          created: 1780939352937
+          modified: 1780942105145
           isPrivate: false
           description: ""
-          sortKey: -1779922812450.75
+          sortKey: -1780190433201
         method: GET
         headers:
           - name: User-Agent
             value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQxNzAwLCJleHAiOjE3ODA5NDUzMDB9.-3lYTxocXxGjJLNxB1XlOIz77sXuPojBAdMDnXxVbHeix2SKRGzVsPUBnQebh9tj
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: Deletar Usuario
+        meta:
+          id: req_fe85c9d5a790437aaa1ce97ab1b3130f
+          created: 1780939352937
+          modified: 1780942165904
+          isPrivate: false
+          description: ""
+          sortKey: -1779988170069
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+          - name: Authorization
+            value: Bearer
+              eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb290QHJvb3QuY29tLmJyIiwiaWF0IjoxNzgwOTQyMTUwLCJleHAiOjE3ODA5NDU3NTB9.HvSHwCk9am3QlOYH1DbF3kzEZssVcvRGs1RC7BVWjIRPDdkBRhm-JkuE1ZVSLaQX
             description: ""
             disabled: false
         settings:
